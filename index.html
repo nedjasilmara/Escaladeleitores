@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala Litúrgica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>ESCALA DE LEITORES</h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="https://liturgia.cancaonova.com/pb/">Litúrgia diária</a></li>
+                <li><a href="https://saosebastiaofabriciano.com.br/noticia/o-ministerio-de-leitor-algumas-dicas-praticas/">Recomendação para Leitores</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLpnAfZ-Ai9RqLfMOhxA8zJQsiZcQT-AHs&si=l26NQ4xzWcwn5KjT">Formação para músicos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card card-leitores">
+            <h2>Leitores</h2>
+            <div class="input-group">
+                <input type="text" id="nome-leitor" placeholder="Nome do Leitor">
+                <button id="salvar-leitor">Salvar</button>
+            </div>
+
+            <div id="lista-leitores-disponiveis" class="lista-nomes-container">
+                <p>Leitores disponíveis:</p>
+                <ul id="leitores-disponiveis"></ul>
+            </div>
+        </section>
+
+        <section class="card card-mes">
+            <h2>Próximos Sorteios</h2>
+            <div id="historico-de-sorteios">
+                <p>Nenhum sorteio registrado ainda.</p>
+            </div>
+        </section>
+
+        <section class="card card-sorteio">
+            <div class="input-group">
+                <label for="sorteio-data">Data</label>
+                <input type="date" id="sorteio-data">
+            </div>
+
+            <div class="input-group">
+                <label for="sorteio-leitura">Leitura</label>
+                <input type="text" id="sorteio-leitura" pçaceholder="Ex: 1º leitura">
+                <small>*Este campo pode ser opcional</small>
+            </div>
+
+            <h3>Exceto</h3>
+            <div class="input-group">
+                <input type="text" class="exceto-nome" placeholder="Nome a excluir">
+                <input type="text" class="exceto-nome" placeholder="Nome a excluir">
+                <input type="text" class="exceto-nome" placeholder="Nome a excluir">
+            </div>
+            <button id="btn-sortear">Sortear</button>
+        </section>
+
+        <section class="card card-resultado">
+            <h2>RESULTADO</h2>
+            <p><strong>Data:</strong> <span id="resultado-data"></span></p>
+            <p><strong>1ª leitura:</strong> <span id="resultado-1leitura"></span></p>
+            <p><strong>2ª leitura:</strong> <span id="resultado-2leitura"></span></p>
+            <p><strong>Preces:</strong> <span id="resultado-preces"></span></p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
